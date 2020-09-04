@@ -10,12 +10,12 @@ import java.math.BigDecimal;
 public class Promotion {
 	
 	boolean active;
-	String promoName;
+	PromotionName promoName;
 	BigDecimal promoPrice;
 	
 	public Promotion() {}
 	
-	public Promotion(boolean active, String promoName, BigDecimal promoPrice) {
+	public Promotion(boolean active, PromotionName promoName, BigDecimal promoPrice) {
 		super();
 		this.active = active;
 		this.promoName = promoName;
@@ -30,11 +30,11 @@ public class Promotion {
 		this.active = active;
 	}
 
-	public String getPromoName() {
+	public PromotionName getPromoName() {
 		return promoName;
 	}
 
-	public void setPromoName(String promoName) {
+	public void setPromoName(PromotionName promoName) {
 		this.promoName = promoName;
 	}
 
