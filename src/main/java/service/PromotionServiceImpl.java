@@ -8,8 +8,10 @@ import model.Product;
 public class PromotionServiceImpl implements PromotionService {
 
 	public BigDecimal calculatePromotion(List<Product> products) {
-		// TODO Auto-generated method stub
-		return null;
+		BigDecimal price = products.stream()
+			.map(x -> x.getPrice())
+			.reduce(BigDecimal.ZERO, BigDecimal::add);
+		return price;
 	}
 	
 	
