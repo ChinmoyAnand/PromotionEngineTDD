@@ -44,5 +44,10 @@ public class PromotionServiceTest {
 		Cart cart = new Cart(products);
 		assertEquals(BigDecimal.valueOf(100), service.calculateFinalCartPrice(cart, null));
 	}
+	
+	@Test(expected = NullPointerException.class)
+	public void calculateFinalPriceWithoutCartTest() {
+		service.calculateFinalCartPrice(null, null);
+	}
 
 }
