@@ -49,5 +49,10 @@ public class PromotionServiceTest {
 	public void calculateFinalPriceWithoutCartTest() {
 		service.calculateFinalCartPrice(null, null);
 	}
+	
+	@Test
+	public void createPromo3ATest() {
+		assertEquals(BigDecimal.valueOf(130), service.createPromotion(PromotionName.THREEA, SKU.A,130).getPromoPrice());
+	}
 
 }
