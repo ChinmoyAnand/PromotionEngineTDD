@@ -8,6 +8,7 @@ import java.util.Arrays;
 import org.junit.Test;
 
 import model.Product;
+import model.SKU;
 
 public class PromotionServiceTest {
 	
@@ -15,7 +16,7 @@ public class PromotionServiceTest {
 	
 	@Test
 	public void calculatePromotionTest() {
-		Product productA = new Product("A","A product",new BigDecimal(50));
+		Product productA = new Product(SKU.A,"A product",new BigDecimal(50));
 		assertEquals(new BigDecimal(50), service.calculatePromotion(Arrays.asList(productA)));
 	}
 
